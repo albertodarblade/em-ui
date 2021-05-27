@@ -4,7 +4,7 @@ import MButton from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import { COLORS as BTN_COLORS, SIZE as BTN_SIZE } from './enums'
 import classnames from 'classnames'
-import Icon from 'components/Icon'
+import Icon from '../Icon'
 import styles from './style.module.css'
 
 function buildVariantProp(isPrimaryAction) {
