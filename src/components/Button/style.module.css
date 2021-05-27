@@ -1,0 +1,30 @@
+.button {
+
+}
+
+.button:not(:global(.Mui-disabled)):global(.MuiButton-contained):global(.error) {
+  background-color: var(--em-danger);
+  color: var(--em-f-accent);
+}
+
+.button:not(:global(.Mui-disabled)):global(.MuiButton-contained):global(.warning) {
+  background-color: var(--em-warning);
+  color: var(--em-f-accent);
+}
+
+.button:not(:global(.Mui-disabled)):global(.MuiButton-contained):global(.success) {
+  background-color: var(--em-success);
+  color: var(--em-f-accent);
+}
+
+.button:not(:global(.Mui-disabled)):global(.MuiButton-text):global(.error) {
+  color: var(--em-danger);
+}
+
+.button:not(:global(.Mui-disabled)):global(.MuiButton-text):global(.warning) {
+  color: var(--em-warning);
+}
+
+.button:not(:global(.Mui-disabled)):global(.MuiButton-text):global(.success) {
+  color: var(--em-success);
+}
