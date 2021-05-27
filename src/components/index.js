@@ -5,6 +5,6 @@ export const Button = EmButton
 export const Icon = EmIcon
 
 export default {
-  Button
+  Button,
   Icon
 }

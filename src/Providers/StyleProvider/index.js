@@ -28,12 +28,11 @@ const theme = createMuiTheme({
 function StyleProvider({ children }) {
   return (
     <ThemeProvider theme={theme}>
-      <link
-        rel='stylesheet'
-        href='https://fonts.googleapis.com/icon?family=Material+Icons'
-      />
-
-      <div type='provider' className={styles.styleRoot}>
+      <div className={styles.styleRoot}>
+        <link
+          rel='stylesheet'
+          href='https://fonts.googleapis.com/icon?family=Material+Icons'
+        />
         {children}
       </div>
     </ThemeProvider>
