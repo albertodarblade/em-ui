@@ -2,7 +2,7 @@ import React from 'react'
 import propTypes from 'prop-types'
 import MButton from '@material-ui/core/Button'
 import CircularProgress from '@material-ui/core/CircularProgress'
-import { COLORS as BTN_COLORS, SIZE as BTN_SIZE } from './enums'
+import ENUMS, { COLORS as BTN_COLORS, SIZE as BTN_SIZE } from './enums'
 import classnames from 'classnames'
 import Icon from '../Icon'
 import styles from './style.module.css'
@@ -12,19 +12,19 @@ function buildVariantProp(isPrimaryAction) {
 }
 
 function buildColoProps(color) {
-  if (Object.values(BTN_COLORS).includes(color)) {
+  if ([BTN_COLORS.PRIMARY, BTN_COLORS.SECONDARY].includes(color)) {
     return { color }
   }
   return { color: 'inherit' }
 }
 
-function buildStartIcon(loading, icon, iconProps) {
+function buildStartIcon(loading, icon, iconProps = {}) {
   if (loading) {
     return <CircularProgress size={16} />
   }
 
   if (icon) {
-    return <Icon>{icon}</Icon>
+    return <Icon {...iconProps}>{icon}</Icon>
   }
   return undefined
 }
@@ -55,6 +55,8 @@ function Button({
   )
 }
 
+Button.ENUMS = ENUMS
+
 Button.propTypes = {
   isPrimaryAction: propTypes.bool,
   color: propTypes.oneOf(Object.values(BTN_COLORS)),
@@ -66,13 +68,10 @@ Button.propTypes = {
 
 Button.defaultProps = {
   isPrimaryAction: false,
-  color: BTN_COLORS.SECONDARY,
+  color: BTN_COLORS.INHERIT,
   size: BTN_SIZE.MEDIUM,
   disabled: false,
   loading: false
 }
-
-export const COLORS = BTN_COLORS
-export const SIZE = BTN_SIZE
 
 export default Button

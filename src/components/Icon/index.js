@@ -14,12 +14,14 @@ function Icon({ name, size, children, ...leftOverProps }) {
   )
 }
 
+Icon.ENUMS = ENUMS
+
 Icon.propTypes = {
   name: propTypes.string,
   size: propTypes.oneOf(Object.values(ENUMS.SIZE))
 }
 
-Icon.propTypes = {
+Icon.defaultProps = {
   size: ENUMS.SIZE.INHERIT
 }
 

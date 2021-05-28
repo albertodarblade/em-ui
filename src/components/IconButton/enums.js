@@ -1,3 +1,8 @@
+export const SIZE = {
+  SMALL: 'small',
+  MEDIUM: 'medium'
+}
+
 export const COLORS = {
   INHERIT: 'inherit',
   PRIMARY: 'primary',
@@ -5,12 +10,6 @@ export const COLORS = {
   ERROR: 'error',
   WARNING: 'warning',
   SUCCESS: 'success'
-}
-
-export const SIZE = {
-  SMALL: 'small',
-  MEDIUM: 'medium',
-  LARGE: 'large'
 }
 
 export default {

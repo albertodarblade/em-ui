@@ -1,0 +1,32 @@
+
+.iconButton:not(:global(.Mui-disabled)):global(.error) {
+  color: var(--em-danger);
+}
+
+.iconButton:not(:global(.Mui-disabled)):global(.warning) {
+  color: var(--em-warning)
+}
+
+.iconButton:not(:global(.Mui-disabled)):global(.success) {
+  color: var(--em-success);
+}
+
+.iconButton:not(:global(.Mui-disabled)):global(.info) {
+  color: var(--em-success);
+}
+
+.iconButton:not(:global(.Mui-disabled)):global(.MuiIconButton-sizeSmall.small) {
+  padding: 8px;
+  font-size: 1.25rem;
+}
+
+.iconButton:global(.shadow) {
+  box-shadow: var(--em-shadow-hue2)
+}
+
+.iconButton:not(:global(.Mui-disabled)):global(.primaryAction) {
+  color: var(--em-primary);
+  background-color: var(--em-bg-primary);
+  box-shadow: var(--em-shadow-hue3)
+
+}
