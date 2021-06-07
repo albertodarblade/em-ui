@@ -3,6 +3,13 @@ export const LANGUAGES = {
   EN: 'en'
 }
 
+export const VARIANTS = {
+  DIALOG: 'dialog',
+  INLINE: 'inline',
+  STATIC: 'static'
+}
+
 export default {
-  LANGUAGES
+  LANGUAGES,
+  VARIANTS
 }

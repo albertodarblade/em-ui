@@ -1,0 +1,16 @@
+.component {
+  display: inline-block;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.component .floatButton {
+  position: absolute;
+  right: 4px
+}
+
+.component :global(.MuiOutlinedInput-input) {
+  padding-right: 36px;
+  font-size: 14px;
+}

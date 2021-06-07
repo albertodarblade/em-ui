@@ -7,19 +7,66 @@ import {
 import MomentUtils from '@date-io/moment'
 import propTypes from 'prop-types'
 import ENUMS from './enums'
+import locale from './locale'
+import IconButton from '../IconButton'
+import styles from './styles.module.css'
 
-function DateTimePicker({ value, onChange, language, ampm, ...leftOverProps }) {
+function buildLabelsFromLocale(locale, language) {
+  const labelProps = locale[language]
+  return labelProps || {}
+}
+
+function buildFormatFromAmpm(dateFormat, ampm) {
+  if (!dateFormat) {
+    return undefined
+  }
+
+  if (ampm) {
+    return `${dateFormat} h:mm a`
+  }
+  return `${dateFormat} HH:mm`
+}
+
+function DateTimePicker({
+  dateFormat,
+  value,
+  onChange,
+  language,
+  ampm,
+  variant,
+  ...leftOverProps
+}) {
+  const labelProps = buildLabelsFromLocale(locale, language)
+
+  function handleClear() {
+    onChange(null)
+  }
+
+  const format = buildFormatFromAmpm(dateFormat, ampm)
   return (
     <MuiPickersUtilsProvider utils={MomentUtils} locale={language}>
-      <MDateTimePicker
-        allowKeyboardControl
-        ampm={ampm}
-        label='DateTimePicker'
-        inputVariant='outlined'
-        value={value}
-        onChange={onChange}
-        {...leftOverProps}
-      />
+      <div className={styles.component}>
+        <MDateTimePicker
+          allowKeyboardControl
+          ampm={ampm}
+          label='DateTimePicker'
+          inputVariant='outlined'
+          value={value}
+          variant={variant}
+          onChange={onChange}
+          format={format}
+          {...labelProps}
+          {...leftOverProps}
+        />
+        {variant !== ENUMS.VARIANTS.STATIC && Boolean(value) && (
+          <IconButton
+            className={styles.floatButton}
+            name='clear'
+            size={IconButton.ENUMS.SIZE.SMALL}
+            onClick={handleClear}
+          />
+        )}
+      </div>
     </MuiPickersUtilsProvider>
   )
 }
