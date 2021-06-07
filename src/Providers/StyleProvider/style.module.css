@@ -1,4 +1,6 @@
 .styleRoot {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --em-bg: #ffffff;
   --em-bg-hue1: #f2f2f2;
   --em-bg-hue2: #ebebeb;
@@ -20,23 +22,23 @@
   --em-danger: #fd5d93;
   --em-success: #8cc63f;
   --em-contrast: #3d474d;
-  --em-tag-default: hsla(0,0%,42.7%,0.18);
+  --em-tag-default: hsla(0, 0%, 42.7%, 0.18);
   --em-font-default: #6d6d6d;
-  --em-tag-red: rgba(254,114,67,0.18);
+  --em-tag-red: rgba(254, 114, 67, 0.18);
   --em-font-red: #fe7243;
-  --em-tag-orange: rgba(254,177,46,0.18);
+  --em-tag-orange: rgba(254, 177, 46, 0.18);
   --em-font-orange: #feb12e;
-  --em-tag-yellow: rgba(255,200,27,0.18);
+  --em-tag-yellow: rgba(255, 200, 27, 0.18);
   --em-font-yellow: #ffc81b;
-  --em-tag-green: rgba(123,196,126,0.18);
+  --em-tag-green: rgba(123, 196, 126, 0.18);
   --em-font-green: #7bc47e;
-  --em-tag-lime: rgba(116,197,189,0.18);
+  --em-tag-lime: rgba(116, 197, 189, 0.18);
   --em-font-lime: #74c5bd;
-  --em-tag-aqua: rgba(9,174,244,0.18);
+  --em-tag-aqua: rgba(9, 174, 244, 0.18);
   --em-font-aqua: #09aef4;
-  --login-gradient: linear-gradient(253deg,#0cc898,#1797d2,#864fe1);
-  --em-shadow: 0 5px 10px rgba(154,160,185,0.025),0 15px 40px #a6adc9;
-  --em-shadow-hue1: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
-  --em-shadow-hue2: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+  --login-gradient: linear-gradient(253deg, #0cc898, #1797d2, #864fe1);
+  --em-shadow: 0 5px 10px rgba(154, 160, 185, 0.025), 0 15px 40px #a6adc9;
+  --em-shadow-hue1: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --em-shadow-hue2: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   --em-shadow-hue3: 0 1px 3px rgb(0 0 0 / 5%);
 }
