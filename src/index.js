@@ -3,7 +3,7 @@ import EmIcon from './components/Icon'
 import EmIconButton from './components/IconButton'
 import EmDateTimePicker from './components/DateTimePicker'
 import EmAutocomplete from './components/Autocomplete'
-
+import EmLogin from './views/Login'
 import EmStyleProvider from './Providers/StyleProvider'
 
 export const Button = EmButton
@@ -13,11 +13,14 @@ export const IconButton = EmIconButton
 export const DateTimePicker = EmDateTimePicker
 export const Autocomplete = EmAutocomplete
 
+export const Login = EmLogin
+
 export default {
   Button,
   Icon,
   StyleProvider,
   IconButton,
   DateTimePicker,
-  Autocomplete
+  Autocomplete,
+  Login
 }
