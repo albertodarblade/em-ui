@@ -131,7 +131,7 @@ function Login({
   )
 }
 
-export const SIZE = ENUMS.SIZE
+Login.ENUMS = ENUMS
 
 Login.defaultProps = {
   googleProps: {},
