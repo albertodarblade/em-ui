@@ -110,6 +110,7 @@ function Login({
             onClick={handleClick}
             callback={handleFacebookAuth}
             onFailure={(response) => handleFail('facebook', response)}
+            disableMobileRedirect
             {...facebookProps}
           />
         )}
