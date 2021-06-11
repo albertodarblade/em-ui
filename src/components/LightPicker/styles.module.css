@@ -1,0 +1,43 @@
+.picker {
+  display: flex;
+}
+
+.picker .option {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  transition: all ease 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.picker .option:hover {
+  opacity: 0.8;
+  box-shadow: var(--em-shadow-2);
+}
+
+.picker .option + .option {
+  margin-left: 32px;
+}
+
+.picker.light .light,
+.picker.dark .dark {
+  border-color: var(--em-success-main);
+  opacity: 1;
+  cursor: initial;
+  box-shadow: var(--em-shadow-2);
+  transform: scale(1.2);
+}
+
+.picker .light {
+  background-color: #ebebeb;
+  color: #222;
+}
+
+.picker .dark {
+  background-color: #222;
+  color: #ebebeb;
+}

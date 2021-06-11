@@ -1,28 +1,8 @@
 .styleRoot {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --em-bg: #ffffff;
-  --em-bg-hue1: #f2f2f2;
-  --em-bg-hue2: #ebebeb;
-  --em-f: #333;
-  --em-f-accent: #fff;
-  --em-f-hue1: #8a9499;
-  --em-f-hue2: rgba(0, 0, 0, 0.54);
-  --em-f-hue3: rgba(0, 0, 0, 0.84);
-  --em-f-hue4: rgba(0, 0, 0, 0.13);
-
-  --em-primary: #655dd0;
-  --em-secondary: #f6a001;
-  --em-bg-primary: rgba(101, 93, 208, 0.08);
-  --em-bg-primary-hover: rgba(101, 93, 208, 0.2);
-  --em-bg-secondary: rgba(246, 160, 1, 0.08);
-  --em-bg-secondary-hover: rgba(246, 160, 1, 0.2);
-
-  --em-warning: #ff9800;
-  --em-danger: #f44336;
-  --em-success: #4caf50;
-  --em-contrast: #3d474d;
-  --em-info: #2196f3;
+  color: var(--em-text-primary);
+  background-color: var(--em-background-default);
 
   --em-tag-default: hsla(0, 0%, 42.7%, 0.18);
   --em-font-default: #6d6d6d;
@@ -38,9 +18,4 @@
   --em-font-lime: #74c5bd;
   --em-tag-aqua: rgba(9, 174, 244, 0.18);
   --em-font-aqua: #09aef4;
-  --login-gradient: linear-gradient(253deg, #0cc898, #1797d2, #864fe1);
-  --em-shadow: 0 5px 10px rgba(154, 160, 185, 0.025), 0 15px 40px #a6adc9;
-  --em-shadow-hue1: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  --em-shadow-hue2: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  --em-shadow-hue3: 0 1px 3px rgb(0 0 0 / 5%);
 }

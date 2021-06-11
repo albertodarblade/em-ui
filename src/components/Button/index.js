@@ -45,12 +45,12 @@ function Button({
   const startIcon = buildStartIcon(loading, icon, iconProps)
   return (
     <MButton
-      {...leftOverProps}
       variant={variant}
       disabled={loading ? true : disabled}
       className={classNames}
       startIcon={startIcon}
       {...colorProps}
+      {...leftOverProps}
     />
   )
 }

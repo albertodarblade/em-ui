@@ -3,32 +3,101 @@ import styles from './style.module.css'
 import { ThemeProvider } from '@material-ui/styles'
 import { createMuiTheme } from '@material-ui/core/styles'
 
-const emTheme = {
-  primary: '#655dd0',
-  secondary: '#f6a001'
+function createEmTheme(theme = {}, isDarkMode) {
+  return createMuiTheme({
+    palette: {
+      type: isDarkMode ? 'dark' : 'light',
+      primary: {
+        main: theme.primary
+      },
+      secondary: {
+        main: theme.secondary
+      }
+    }
+  })
 }
 
-const theme = createMuiTheme({
-  status: {
-    danger: '#e53e3e'
-  },
-  palette: {
-    primary: {
-      // light: will be calculated from palette.primary.main,
-      main: emTheme.primary
-      // dark: will be calculated from palette.primary.main,
-      // contrastText: will be calculated to contrast with palette.primary.main
-    },
-    secondary: {
-      main: emTheme.secondary
-    }
-  }
-})
+function getVariableNameValue(name, palette) {
+  const colors = palette[name]
+  const PREFIX = `--em-${name}-`
+  const items = Object.entries(colors)
+  console.log(items, 'ITEMS')
+  const variables = items.map((item) => {
+    const [key, value] = item
+    return [PREFIX + key, value]
+  })
+  return variables
+}
 
-function StyleProvider({ children }) {
+function updateCssVars({ node, palette, shadows }) {
+  const primaryColor = palette.primary.main
+  const secondaryColor = palette.secondary.main
+
+  const variables = [
+    getVariableNameValue('background', palette),
+    getVariableNameValue('primary', palette),
+    getVariableNameValue('secondary', palette),
+    getVariableNameValue('grey', palette),
+    getVariableNameValue('info', palette),
+    getVariableNameValue('error', palette),
+    getVariableNameValue('success', palette),
+    getVariableNameValue('text', palette),
+    getVariableNameValue('warning', palette)
+  ]
+
+  variables.forEach((variablesCollection) => {
+    variablesCollection.forEach((variablePair) => {
+      const [variableName, variableValue] = variablePair
+      console.log(variableName, variableValue, 'adding')
+      node.style.setProperty(variableName, variableValue)
+    })
+  })
+
+  const primaryRGBA = convertHexToRGBA(primaryColor, 8)
+  const primaryRGBAHover = convertHexToRGBA(primaryColor, 20)
+  const secondaryRGBA = convertHexToRGBA(secondaryColor, 8)
+  const secondaryRGBAHover = convertHexToRGBA(secondaryColor, 20)
+
+  node.style.setProperty('--em-primary-background', primaryRGBA)
+  node.style.setProperty('--em-primary-background-hover', primaryRGBAHover)
+  node.style.setProperty('--em-secondary-background', secondaryRGBA)
+  node.style.setProperty('--em-secondary-background-hover', secondaryRGBAHover)
+  shadows.forEach((shadow, index) => {
+    node.style.setProperty(`--em-shadow-${index}`, shadow)
+  })
+}
+
+function convertHexToRGBA(hexCode, opacity) {
+  let hex = hexCode.replace('#', '')
+
+  if (hex.length === 3) {
+    hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`
+  }
+
+  const r = parseInt(hex.substring(0, 2), 16)
+  const g = parseInt(hex.substring(2, 4), 16)
+  const b = parseInt(hex.substring(4, 6), 16)
+
+  return `rgba(${r},${g},${b},${opacity / 100})`
+}
+
+function StyleProvider({ themes, themeIndex, isDarkMode, children }) {
+  const theme = themes[themeIndex]
+  const ref = React.useRef()
+  const emTheme = createEmTheme(theme, isDarkMode)
+  console.log(emTheme, 'Material theme')
+
+  React.useEffect(() => {
+    updateCssVars({
+      node: ref.current,
+      palette: emTheme.palette,
+      shadows: emTheme.shadows
+    })
+  }, [themeIndex, isDarkMode])
+
   return (
-    <ThemeProvider theme={theme}>
-      <div className={styles.styleRoot}>
+    <ThemeProvider theme={emTheme}>
+      <div className={styles.styleRoot} ref={ref}>
         <link
           rel='stylesheet'
           href='https://fonts.googleapis.com/icon?family=Material+Icons'
@@ -37,6 +106,11 @@ function StyleProvider({ children }) {
       </div>
     </ThemeProvider>
   )
+}
+
+StyleProvider.defaultProps = {
+  theme: 0,
+  isDarkMode: false
 }
 
 export default StyleProvider

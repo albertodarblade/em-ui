@@ -22,6 +22,7 @@ Icon.propTypes = {
 }
 
 Icon.defaultProps = {
+  name: 'info',
   size: ENUMS.SIZE.INHERIT
 }
 

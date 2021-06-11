@@ -2,6 +2,10 @@
   "common": {
     "loginMessage": "Inicia session con tu cuenta favorita",
     "signItWith": "Inicia session con",
-    "loading": "Cargando"
+    "loading": "Cargando",
+    "welcome": "Bienvenido",
+    "chooseColor": "Escoge tu color favorito",
+    "chooseDarkMode": "Escoge el tipo de luz",
+    "chooseLanguage": "Escoge tu lenguage"
   }
 }

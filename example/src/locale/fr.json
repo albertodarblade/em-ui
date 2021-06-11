@@ -1,0 +1,11 @@
+{
+  "common": {
+    "loginMessage": "Connectez-vous avec votre compte préféré",
+    "signItWith": "Connectez-vous avec",
+    "loading": "Chargement",
+    "welcome": "Bienvenue",
+    "chooseColor": "Choisissez votre couleur préférée",
+    "chooseDarkMode": "Choisissez votre lumière préférée",
+    "chooseLanguage": "Choisissez votre langue"
+  }
+}

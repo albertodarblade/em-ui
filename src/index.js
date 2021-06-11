@@ -4,17 +4,21 @@ import IconButton from './components/IconButton'
 import DateTimePicker from './components/DateTimePicker'
 import Autocomplete from './components/Autocomplete'
 import Login from './views/Login'
+import Settings from './views/Settings'
 import Snackbar from './components/Snackbar'
-import Alert from './components/Alert'
-import useAlerts from './hooks/useAlerts'
 import EmProvider from './Providers/EmProvider'
-
+import useAlerts from './hooks/useAlerts'
+import useSettings from './hooks/useSettings'
+import useTranslation from './hooks/useTranslation'
 const hooks = {
-  useAlerts
+  useAlerts,
+  useSettings,
+  useTranslation
 }
 
 const views = {
-  Login
+  Login,
+  Settings
 }
 
 export default {
@@ -26,6 +30,5 @@ export default {
   IconButton,
   DateTimePicker,
   Autocomplete,
-  Snackbar,
-  Alert
+  Snackbar
 }

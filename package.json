@@ -70,12 +70,12 @@
     "@material-ui/styles": "~4.11.4",
     "classnames": "^2.3.1",
     "express": "^4.17.1",
-    "moment": "^2.29.1",
     "i18next": "~20.3.1",
+    "moment": "~2.29.1",
     "notistack": "~1.0.9",
-    "react-i18next": "~11.10.0",
     "react-facebook-login": "~4.1.1",
     "react-google-login": "~5.2.2",
+    "react-i18next": "~11.10.0",
     "serve-static": "^1.14.1"
   }
 }

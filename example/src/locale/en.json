@@ -2,6 +2,10 @@
   "common": {
     "loginMessage": "Sign in with your favorite account",
     "signItWith": "Sign in with",
-    "loading": "Loading"
+    "loading": "Loading",
+    "welcome": "Welcome",
+    "chooseColor": "Choose your favorite color",
+    "chooseDarkMode": "Choose your favorite light",
+    "chooseLanguage": "Choose your language"
   }
 }

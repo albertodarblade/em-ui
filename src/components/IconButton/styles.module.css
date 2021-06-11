@@ -1,18 +1,17 @@
-
 .iconButton:not(:global(.Mui-disabled)):global(.error) {
-  color: var(--em-danger);
+  color: var(--em-error-main);
 }
 
 .iconButton:not(:global(.Mui-disabled)):global(.warning) {
-  color: var(--em-warning)
+  color: var(--em-warning-main);
 }
 
 .iconButton:not(:global(.Mui-disabled)):global(.success) {
-  color: var(--em-success);
+  color: var(--em-success-main);
 }
 
 .iconButton:not(:global(.Mui-disabled)):global(.info) {
-  color: var(--em-success);
+  color: var(--em-success-main);
 }
 
 .iconButton:not(:global(.Mui-disabled)):global(.MuiIconButton-sizeSmall.small) {
@@ -21,12 +20,11 @@
 }
 
 .iconButton:global(.shadow) {
-  box-shadow: var(--em-shadow-hue2)
+  box-shadow: var(--em-shadow-4);
 }
 
 .iconButton:not(:global(.Mui-disabled)):global(.primaryAction) {
-  color: var(--em-primary);
-  background-color: var(--em-bg-primary);
-  box-shadow: var(--em-shadow-hue3)
-
+  color: var(--em-primary-main);
+  background-color: var(--em-primary-background);
+  box-shadow: var(--em-shadow-5);
 }

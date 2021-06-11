@@ -4,7 +4,7 @@
 }
 
 .buttonsArea {
-  box-shadow: var(--em-shadow);
+  box-shadow: var(--em-shadow-20);
   padding: 32px;
   position: absolute;
   margin: auto auto;
@@ -12,7 +12,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: var(--em-bg);
+  background-color: var(--em-background-default);
   max-width: 620px;
   max-height: 520px;
   width: 100%;
@@ -26,14 +26,19 @@
 }
 
 .background {
-  background: linear-gradient(253deg, #0cc898, #1797d2, #864fe1);
+  background: linear-gradient(
+    253deg,
+    var(--em-primary-light),
+    var(--em-primary-light),
+    var(--em-secondary-light)
+  );
   height: 50vh;
   background-size: 300% 300%;
   animation: backgroundChange 15s ease infinite;
 }
 
 .backgroundFooter {
-  background: var(--em-bg);
+  background: var(--em-background-default);
   height: 50vh;
 }
 
