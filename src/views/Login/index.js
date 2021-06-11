@@ -6,6 +6,7 @@ import Dialog from '@material-ui/core/Dialog'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import classnames from 'classnames'
 import styles from './styles.module.css'
+import useAlerts from '../../hooks/useAlerts'
 import propTypes from 'prop-types'
 
 function Login({
@@ -21,13 +22,17 @@ function Login({
   googleProps,
   onAuthenticate,
   onFailure,
-  onClickButtons
+  onClickButtons,
+  successText,
+  errorText
 }) {
   const [loading, setLoading] = React.useState(false)
   const classNames = classnames({
     [styles.login]: true,
     [styles[size]]: Boolean(size)
   })
+
+  const { addAlert } = useAlerts()
 
   function handleClick(event) {
     onClickButtons(event)
@@ -62,6 +67,7 @@ function Login({
     }
     onAuthenticate(payload, response)
     setLoading(false)
+    addAlert(successText, { variant: 'success', autoHideDuration: 3000 })
   }
 
   function handleGoogleAuth(response) {
@@ -80,11 +86,17 @@ function Login({
     }
     onAuthenticate(payload, response)
     setLoading(false)
+    addAlert(successText, { variant: 'success', autoHideDuration: 3000 })
   }
 
   function handleFail(provider, error) {
     setLoading(false)
     onFailure({ provider, error })
+    addAlert(errorText, {
+      variant: 'error',
+      autoHideDuration: 3000,
+      persist: true
+    })
   }
 
   return (
@@ -140,6 +152,8 @@ Login.defaultProps = {
   size: ENUMS.SIZE.SMALL,
   buttonText: '',
   loadingText: 'Loading...',
+  successText: 'Successfully authenticated',
+  errorText: 'An error appeard on authentication',
   onAuthenticate: () => {},
   onFailure: () => {},
   onClickButtons: () => {}
@@ -149,6 +163,8 @@ Login.propTypes = {
   size: propTypes.oneOf(Object.values(ENUMS.SIZE)),
   buttonText: propTypes.string,
   loadingText: propTypes.string,
+  successText: propTypes.string,
+  errorText: propTypes.string,
   googleProps: propTypes.object,
   facebookProps: propTypes.object,
   onAuthenticate: propTypes.func,

@@ -1,26 +1,31 @@
-import EmButton from './components/Button'
-import EmIcon from './components/Icon'
-import EmIconButton from './components/IconButton'
-import EmDateTimePicker from './components/DateTimePicker'
-import EmAutocomplete from './components/Autocomplete'
-import EmLogin from './views/Login'
-import EmStyleProvider from './Providers/StyleProvider'
+import Button from './components/Button'
+import Icon from './components/Icon'
+import IconButton from './components/IconButton'
+import DateTimePicker from './components/DateTimePicker'
+import Autocomplete from './components/Autocomplete'
+import Login from './views/Login'
+import Snackbar from './components/Snackbar'
+import Alert from './components/Alert'
+import useAlerts from './hooks/useAlerts'
+import EmProvider from './Providers/EmProvider'
 
-export const Button = EmButton
-export const Icon = EmIcon
-export const StyleProvider = EmStyleProvider
-export const IconButton = EmIconButton
-export const DateTimePicker = EmDateTimePicker
-export const Autocomplete = EmAutocomplete
+const hooks = {
+  useAlerts
+}
 
-export const Login = EmLogin
+const views = {
+  Login
+}
 
 export default {
+  hooks,
+  views,
+  EmProvider,
   Button,
   Icon,
-  StyleProvider,
   IconButton,
   DateTimePicker,
   Autocomplete,
-  Login
+  Snackbar,
+  Alert
 }

@@ -18,10 +18,12 @@
   --em-bg-secondary: rgba(246, 160, 1, 0.08);
   --em-bg-secondary-hover: rgba(246, 160, 1, 0.2);
 
-  --em-warning: #ff8d72;
-  --em-danger: #fd5d93;
-  --em-success: #8cc63f;
+  --em-warning: #ff9800;
+  --em-danger: #f44336;
+  --em-success: #4caf50;
   --em-contrast: #3d474d;
+  --em-info: #2196f3;
+
   --em-tag-default: hsla(0, 0%, 42.7%, 0.18);
   --em-font-default: #6d6d6d;
   --em-tag-red: rgba(254, 114, 67, 0.18);
