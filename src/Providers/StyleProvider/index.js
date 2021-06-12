@@ -21,7 +21,6 @@ function getVariableNameValue(name, palette) {
   const colors = palette[name]
   const PREFIX = `--em-${name}-`
   const items = Object.entries(colors)
-  console.log(items, 'ITEMS')
   const variables = items.map((item) => {
     const [key, value] = item
     return [PREFIX + key, value]
@@ -48,7 +47,6 @@ function updateCssVars({ node, palette, shadows }) {
   variables.forEach((variablesCollection) => {
     variablesCollection.forEach((variablePair) => {
       const [variableName, variableValue] = variablePair
-      console.log(variableName, variableValue, 'adding')
       node.style.setProperty(variableName, variableValue)
     })
   })
@@ -85,7 +83,6 @@ function StyleProvider({ themes, themeIndex, isDarkMode, children }) {
   const theme = themes[themeIndex]
   const ref = React.useRef()
   const emTheme = createEmTheme(theme, isDarkMode)
-  console.log(emTheme, 'Material theme')
 
   React.useEffect(() => {
     updateCssVars({

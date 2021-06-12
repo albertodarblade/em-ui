@@ -19,7 +19,6 @@ function Settings({ darkModeText, colorText, languageText }) {
     themeIndex
   } = contextState
 
-  console.log(contextState, 'THEMES')
   function handleColorChange(index) {
     setThemeIndex(index)
   }
