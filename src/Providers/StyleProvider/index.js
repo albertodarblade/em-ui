@@ -32,6 +32,10 @@ function updateCssVars({ node, palette, shadows }) {
   const primaryColor = palette.primary.main
   const secondaryColor = palette.secondary.main
 
+  document.body.style.setProperty(
+    'background-color',
+    palette.background.default
+  )
   const variables = [
     getVariableNameValue('background', palette),
     getVariableNameValue('primary', palette),
@@ -81,12 +85,11 @@ function convertHexToRGBA(hexCode, opacity) {
 
 function StyleProvider({ themes, themeIndex, isDarkMode, children }) {
   const theme = themes[themeIndex]
-  const ref = React.useRef()
   const emTheme = createEmTheme(theme, isDarkMode)
 
   React.useEffect(() => {
     updateCssVars({
-      node: ref.current,
+      node: document.body,
       palette: emTheme.palette,
       shadows: emTheme.shadows
     })
@@ -94,7 +97,7 @@ function StyleProvider({ themes, themeIndex, isDarkMode, children }) {
 
   return (
     <ThemeProvider theme={emTheme}>
-      <div className={styles.styleRoot} ref={ref}>
+      <div className={styles.styleRoot}>
         <link
           rel='stylesheet'
           href='https://fonts.googleapis.com/icon?family=Material+Icons'

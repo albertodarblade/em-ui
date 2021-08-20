@@ -2,6 +2,7 @@ import React from 'react'
 import Engageme from 'em-ui'
 import 'em-ui/dist/index.css'
 
+const { Wizard } = Engageme
 const { useAlerts, useSettings, useTranslation } = Engageme.hooks
 
 const { Login, Settings } = Engageme.views
@@ -11,9 +12,26 @@ const App = () => {
   const { addAlert } = alerts
   const [t] = useTranslation('common')
 
+  const slides = [
+    {
+      title: 'Before start, lets do a quick configuration.',
+      render: (
+        <Settings
+          darkModeText={t('chooseDarkMode')}
+          languageText={t('chooseLanguage')}
+          colorText={t('chooseColor')}
+        />
+      )
+    },
+    {
+      title: 'Thank you',
+      render: <div> let start it </div>
+    }
+  ]
   return (
     <div>
-      <Settings
+      <Wizard slides={slides} />
+      {/* <Settings
         darkModeText={t('chooseDarkMode')}
         languageText={t('chooseLanguage')}
         colorText={t('chooseColor')}
@@ -33,10 +51,60 @@ const App = () => {
           addAlert(t('welcome') + ' ' + payload.user.name)
         }
         size='large'
-      />
+      /> */}
     </div>
   )
 }
 App.count = 0
 
 export default App
+
+/* Wizard Demo
+
+
+import React from 'react'
+import Engageme from 'em-ui'
+import 'em-ui/dist/index.css'
+
+const { Wizard } = Engageme
+const { useAlerts, useSettings, useTranslation } = Engageme.hooks
+
+const { Login, Settings } = Engageme.views
+
+const App = () => {
+  const alerts = useAlerts()
+  const { addAlert } = alerts
+  const [t] = useTranslation('common')
+
+  const slides = [
+    {
+      title:
+        'Welcome to on sync app, in this app we will manage your tasks and collaborative work',
+      render: <div> ON sync </div>
+    },
+    {
+      title: 'Customize your favorite settings before start.',
+      render: (
+        <Settings
+          darkModeText={t('chooseDarkMode')}
+          languageText={t('chooseLanguage')}
+          colorText={t('chooseColor')}
+        />
+      )
+    },
+    {
+      tile: 'Invite your friends by email',
+      render: <div> friends list </div>
+    },
+    {
+      title: 'Thank you',
+      render: <div> let start it </div>
+    }
+  ]
+  return (
+    <div>
+      <Wizard slides={slides} />
+
+
+
+*/

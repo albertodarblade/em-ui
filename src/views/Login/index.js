@@ -153,7 +153,7 @@ Login.defaultProps = {
   buttonText: '',
   loadingText: 'Loading...',
   successText: 'Successfully authenticated',
-  errorText: 'An error appeard on authentication',
+  errorText: 'An error appear on authentication',
   onAuthenticate: () => {},
   onFailure: () => {},
   onClickButtons: () => {}

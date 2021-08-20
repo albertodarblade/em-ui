@@ -1,9 +1,14 @@
 export default {
-  languages: [],
+  languages: [
+    {
+      name: 'English',
+      value: 'en'
+    }
+  ],
   themes: [
     {
-      primary: '#655dd0',
-      secondary: '#f6a001'
+      primary: '#a278cf',
+      secondary: '#b545af'
     }
   ]
 }

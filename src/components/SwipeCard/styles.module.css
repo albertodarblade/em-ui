@@ -1,0 +1,23 @@
+.action {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  height: 100%;
+}
+
+.action.left {
+  align-items: flex-end;
+}
+
+.action .actionInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+  margin: 0 8px;
+  border-radius: 6px;
+  height: 100%;
+}

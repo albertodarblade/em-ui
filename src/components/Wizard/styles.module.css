@@ -1,0 +1,77 @@
+.root {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: auto;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--em-background-paper);
+  color: var(--em-text-primary);
+  box-shadow: var(--em-shadow-3);
+  max-width: 720px;
+  margin: auto;
+}
+
+.slide {
+  height: calc(100vh - 64px);
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-weight: 500;
+  height: 48px;
+  display: flex;
+  box-sizing: border-box;
+
+  align-items: center;
+}
+
+.dots {
+  position: absolute;
+  bottom: 0;
+  height: 64px;
+  box-sizing: border-box;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  justify-content: space-between;
+}
+
+.dots .dotsGroup {
+  display: flex;
+  height: 64px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: var(--em-text-secondary);
+  margin: 4px;
+  border-radius: 50%;
+  transition: all ease 0.3s;
+}
+
+.dot.active {
+  height: 16px;
+  width: 16px;
+  background-color: var(--em-primary-main);
+}
+
+.buttonsArea {
+  width: 100%;
+  flex-shrink: 1;
+}
+
+.buttonsArea.right {
+  display: flex;
+  justify-content: flex-end;
+}

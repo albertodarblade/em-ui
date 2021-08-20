@@ -1,0 +1,12 @@
+.avatar.small {
+  height: 32px;
+  width: 32px;
+}
+.avatar.medium {
+  height: 48px;
+  width: 48px;
+}
+.avatar.large {
+  height: 64px;
+  width: 64px;
+}

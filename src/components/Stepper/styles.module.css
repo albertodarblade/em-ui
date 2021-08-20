@@ -1,0 +1,11 @@
+.content {
+  padding: 16px;
+}
+
+.actions {
+  padding: 24px 16px 0 16px;
+}
+
+.actions > * + * {
+  margin-left: 32px !important;
+}

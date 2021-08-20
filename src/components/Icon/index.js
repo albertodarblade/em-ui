@@ -9,7 +9,7 @@ function Icon({ name, size, children, ...leftOverProps }) {
   const classNames = classnames(styles.icon, styles[size])
   return (
     <MIcon {...leftOverProps} fontSize={size} className={classNames}>
-      {name || children}
+      {children || name}
     </MIcon>
   )
 }
@@ -23,7 +23,7 @@ Icon.propTypes = {
 
 Icon.defaultProps = {
   name: 'info',
-  size: ENUMS.SIZE.INHERIT
+  size: ENUMS.SIZE.DEFAULT
 }
 
 export const SIZE = ENUMS.SIZE

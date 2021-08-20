@@ -57,4 +57,8 @@ function IconButton({
 
 IconButton.ENUMS = ENUMS
 
+IconButton.defaultProps = {
+  size: ENUMS.SIZE.MEDIUM
+}
+
 export default IconButton

@@ -1,0 +1,52 @@
+.emComponent.primary {
+  background-color: var(--em-primary-main);
+  color: var(--em-primary-contrastText);
+}
+
+.emComponent.primary:hover {
+  background-color: var(--em-primary-dark);
+}
+
+.emComponent.secondary {
+  background-color: var(--em-secondary-main);
+  color: var(--em-secondary-contrastText);
+}
+
+.emComponent.secondary:hover {
+  background-color: var(--em-secondary-dark);
+}
+
+.emComponent.error {
+  background-color: var(--em-error-main);
+  color: var(--em-error-contrastText);
+}
+.emComponent.error:hover {
+  background-color: var(--em-error-dark);
+}
+
+.emComponent.warning {
+  background-color: var(--em-warning-main);
+  color: var(--em-warning-contrastText);
+}
+
+.emComponent.warning:hover {
+  background-color: var(--em-warning-dark);
+}
+
+.emComponent.success {
+  background-color: var(--em-success-main);
+  color: var(--em-success-contrastText);
+}
+
+.emComponent.success:hover {
+  background-color: var(--em-success-dark);
+}
+
+.emComponent.info {
+  background-color: var(--em-info-main);
+  color: var(--em-info-contrastText);
+}
+
+.emComponent.info:hover {
+  background-color: var(--em-info-dark);
+}

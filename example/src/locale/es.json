@@ -1,5 +1,6 @@
 {
   "common": {
+    "BeforeStart": "Antes de empezar, configuremos tus preferencias",
     "loginMessage": "Inicia session con tu cuenta favorita",
     "signItWith": "Inicia session con",
     "loading": "Cargando",
