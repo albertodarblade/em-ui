@@ -1,6 +1,6 @@
 import React from 'react'
-import Engageme from 'em-ui'
-import 'em-ui/dist/index.css'
+import Engageme from 'engageme-ui'
+import 'engageme-ui/dist/index.css'
 
 const { Wizard } = Engageme
 const { useAlerts, useSettings, useTranslation } = Engageme.hooks

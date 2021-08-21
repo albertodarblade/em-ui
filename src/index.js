@@ -15,6 +15,8 @@ import QueryModals from './components/QueryModals'
 import Stepper from './components/Stepper'
 import TextField from './components/TextField'
 import Stage from './components/Stage'
+import ImageUploader from './components/ImageUploader'
+import ImageGallery from './components/ImageGallery'
 
 import Login from './views/Login'
 import Settings from './views/Settings'
@@ -77,5 +79,7 @@ export default {
   QueryModals,
   Stepper,
   TextField,
-  Stage
+  Stage,
+  ImageUploader,
+  ImageGallery
 }

@@ -1,0 +1,38 @@
+.imagesSection {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 16px;
+  border-radius: 6px;
+  box-shadow: var(--em-shadow-2);
+}
+
+.imagesSection .image {
+  max-width: 320px;
+  max-height: 180px;
+  border-radius: 6px;
+
+}
+
+.imagesSection .imageButtons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imagesSection .imageButtons > * + * {
+  margin-left: 16px;
+}
+
+
+.uploadWrapper {
+}
+
+.field {
+  margin: 16px 0;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+
+}

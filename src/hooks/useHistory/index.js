@@ -16,7 +16,14 @@ export default function useHistory() {
     const search = queryString.parse(history.location.search)
     return Boolean(search[query])
   }
+
+  function getQuery(query) {
+    const search = queryString.parse(history.location.search)
+    return search[query]
+  }
+
   const methods = {
+    getQuery,
     mergeQuery,
     hasQuery
   }
