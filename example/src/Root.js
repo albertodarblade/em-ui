@@ -12,6 +12,7 @@ const App = () => {
   const { addAlert } = alerts
   const [t] = useTranslation('common')
 
+  const [images, setImages] = React.useState([])
   const slides = [
     {
       title: 'Before start, lets do a quick configuration.',
@@ -30,7 +31,11 @@ const App = () => {
   ]
   return (
     <div>
-      <Wizard slides={slides} />
+      <Engageme.ImageUploader
+        value={images}
+        multiple
+        onChange={(images) => setImages(images)}
+      />
       {/* <Settings
         darkModeText={t('chooseDarkMode')}
         languageText={t('chooseLanguage')}

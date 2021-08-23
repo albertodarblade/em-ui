@@ -17,6 +17,7 @@ import TextField from './components/TextField'
 import Stage from './components/Stage'
 import ImageUploader from './components/ImageUploader'
 import ImageGallery from './components/ImageGallery'
+import ConfirmationButton from './components/ConfirmationButton'
 
 import Login from './views/Login'
 import Settings from './views/Settings'
@@ -81,5 +82,6 @@ export default {
   TextField,
   Stage,
   ImageUploader,
-  ImageGallery
+  ImageGallery,
+  ConfirmationButton
 }

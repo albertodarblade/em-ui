@@ -41,14 +41,12 @@ function ImageUploader({ loading, buttonText, ...props }) {
                       className={styles.field}
                       name='edit'
                       color='primary'
-                      isPrimaryAction
                       onClick={() => onImageUpdate(index)}
                     />
 
                     <IconButton
                       disabled={loading}
                       className={styles.field}
-                      isPrimaryAction
                       color='danger'
                       name='delete'
                       onClick={() => onImageRemove(index)}
