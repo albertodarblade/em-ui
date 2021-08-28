@@ -18,6 +18,7 @@ import Stage from './components/Stage'
 import ImageUploader from './components/ImageUploader'
 import ImageGallery from './components/ImageGallery'
 import ConfirmationButton from './components/ConfirmationButton'
+import ColorPicker from './components/ColorPicker'
 
 import Login from './views/Login'
 import Settings from './views/Settings'
@@ -83,5 +84,6 @@ export default {
   Stage,
   ImageUploader,
   ImageGallery,
-  ConfirmationButton
+  ConfirmationButton,
+  ColorPicker
 }
