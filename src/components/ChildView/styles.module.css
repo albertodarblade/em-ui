@@ -1,0 +1,39 @@
+.navigation {
+    height: 80px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--em-shadow-1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--em-background-paper);
+}
+
+.navigation > *:not(.divider) {
+    flex-shrink: 0;
+}
+
+.breadcrumbs * {
+    font-size: 14px !important;
+}
+
+.navigationText {
+    margin-left: 16px;
+}
+
+.divider {
+    flex-shrink: 1;
+    width: 100%;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 6px;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+}

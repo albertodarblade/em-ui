@@ -19,6 +19,9 @@ import ImageUploader from './components/ImageUploader'
 import ImageGallery from './components/ImageGallery'
 import ConfirmationButton from './components/ConfirmationButton'
 import ColorPicker from './components/ColorPicker'
+import HorizontalScroll from './components/HorizontalScroll'
+import ChildView from './components/ChildView'
+import Link from './components/Link'
 
 import Login from './views/Login'
 import Settings from './views/Settings'
@@ -30,6 +33,7 @@ import useSettings from './hooks/useSettings'
 import useTranslation from './hooks/useTranslation'
 import useCookies from './hooks/useCookies'
 import useHistory from './hooks/useHistory'
+import useDebounce from './hooks/useDebounce'
 
 import jsCookies from './utils/jsCookies'
 import emitter from './utils/emitter'
@@ -46,7 +50,8 @@ const hooks = {
   useSettings,
   useTranslation,
   useCookies,
-  useHistory
+  useHistory,
+  useDebounce
 }
 
 const views = {
@@ -85,5 +90,8 @@ export default {
   ImageUploader,
   ImageGallery,
   ConfirmationButton,
-  ColorPicker
+  ColorPicker,
+  HorizontalScroll,
+  Link,
+  ChildView
 }

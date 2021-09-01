@@ -1,0 +1,48 @@
+.main {
+    position: relative;
+}
+
+.main .actions {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    background-color: rgba(0,0,0,0.57) !important;
+    color: #fff !important;
+
+    height: 48px;
+}
+
+.main .actions:hover {
+    background-color: rgba(0,0,0,0.87) !important;
+}
+
+.actions.left {
+    left: 0;
+}
+
+.actions.right {
+    right: 0;
+}
+
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.content::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+.content {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.content > * {
+    flex-shrink: 0;
+}
