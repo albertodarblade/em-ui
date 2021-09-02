@@ -39,6 +39,7 @@ import jsCookies from './utils/jsCookies'
 import emitter from './utils/emitter'
 
 import connectView from './hocs/connectView'
+import withContext from './hocs/withContext'
 
 const utils = {
   jsCookies,
@@ -61,7 +62,8 @@ const views = {
 }
 
 const hocs = {
-  connectView
+  connectView,
+  withContext
 }
 
 export default {

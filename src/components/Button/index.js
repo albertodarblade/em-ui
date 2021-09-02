@@ -24,7 +24,7 @@ function buildStartIcon(loading, icon, iconProps = {}) {
   }
 
   if (icon) {
-    return <Icon {...iconProps}>{icon}</Icon>
+    return <Icon {...iconProps} name={icon} />
   }
   return undefined
 }
