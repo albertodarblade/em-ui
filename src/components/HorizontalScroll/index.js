@@ -59,7 +59,7 @@ function HorizontalScroll({
       {state.showLeft && (
         <IconButton
           onClick={() => onScroll('left')}
-          name='chevron_left'
+          name='ChevronLeft'
           color='secondary'
           isPrimaryAction
           className={classnames(styles.actions, styles.left)}
@@ -68,7 +68,7 @@ function HorizontalScroll({
       {state.showRight && (
         <IconButton
           color='secondary'
-          name='chevron_right'
+          name='ChevronRight'
           onClick={() => onScroll('right')}
           isPrimaryAction
           className={classnames(styles.actions, styles.right)}

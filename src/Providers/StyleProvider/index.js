@@ -97,13 +97,7 @@ function StyleProvider({ themes, themeIndex, isDarkMode, children }) {
 
   return (
     <ThemeProvider theme={emTheme}>
-      <div className={styles.styleRoot}>
-        <link
-          rel='stylesheet'
-          href='https://fonts.googleapis.com/icon?family=Material+Icons'
-        />
-        {children}
-      </div>
+      <div className={styles.styleRoot}>{children}</div>
     </ThemeProvider>
   )
 }

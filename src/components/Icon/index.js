@@ -1,16 +1,21 @@
 import React from 'react'
-import MIcon from '@material-ui/core/Icon'
 import classnames from 'classnames'
 import ENUMS from './enums'
+import * as MaterialIcons from '@material-ui/icons'
 import styles from './styles.module.css'
 import propTypes from 'prop-types'
 
 function Icon({ name, size, children, ...leftOverProps }) {
   const classNames = classnames(styles.icon, styles[size])
+  const Icon = MaterialIcons[name]
+  if (!Icon) {
+    return null
+  }
+
   return (
-    <MIcon {...leftOverProps} fontSize={size} className={classNames}>
+    <Icon {...leftOverProps} fontSize={size} className={classNames}>
       {children || name}
-    </MIcon>
+    </Icon>
   )
 }
 

@@ -39,7 +39,7 @@ function ImageUploader({ loading, buttonText, ...props }) {
                     <IconButton
                       disabled={loading}
                       className={styles.field}
-                      name='edit'
+                      name='Edit'
                       color='primary'
                       onClick={() => onImageUpdate(index)}
                     />
@@ -47,8 +47,8 @@ function ImageUploader({ loading, buttonText, ...props }) {
                     <IconButton
                       disabled={loading}
                       className={styles.field}
-                      color='danger'
-                      name='delete'
+                      color='error'
+                      name='Delete'
                       onClick={() => onImageRemove(index)}
                     />
                   </div>

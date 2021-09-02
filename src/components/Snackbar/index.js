@@ -29,7 +29,7 @@ function Snackbar({
           UNDO
         </Button>
         <IconButton
-          name='close'
+          name='Close'
           size='small'
           aria-label='close'
           onClick={onClose}

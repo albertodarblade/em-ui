@@ -12,7 +12,7 @@ function AlertProvider({ children }) {
       maxSnack={6}
       ref={notistackRef}
       action={(key) => (
-        <IconButton onClick={onClickDismiss(key)} name='close' />
+        <IconButton onClick={onClickDismiss(key)} name='Close' />
       )}
     >
       {children}

@@ -61,7 +61,7 @@ function DateTimePicker({
         {variant !== ENUMS.VARIANTS.STATIC && Boolean(value) && (
           <IconButton
             className={styles.floatButton}
-            name='clear'
+            name='Clear'
             size={IconButton.ENUMS.SIZE.SMALL}
             onClick={handleClear}
           />

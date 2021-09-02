@@ -11,7 +11,7 @@ function ChildView({ backLink, title, children, path, renderOptions }) {
       <div className={styles.navigation}>
         {backLink && (
           <Link to={backLink}>
-            <IconButton name='arrow_back' />
+            <IconButton name='ArrowBack' />
           </Link>
         )}
         <div className={styles.navigationText}>
